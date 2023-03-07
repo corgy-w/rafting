@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raft>
+    <cluster>
+        <remote>raft://127.0.0.1:6001</remote>
+        <local>raft://127.0.0.1:6002</local>
+        <remote>raft://127.0.0.1:6003</remote>
+    </cluster>
+    <timeout>
+        <pre-vote>true</pre-vote>
+        <tick>300</tick>
+        <heartbeat>1</heartbeat>
+        <election>3</election>
+        <broadcast>0.5</broadcast>
+    </timeout>
+    <snapshot>
+        <trigger-interval>1</trigger-interval>
+        <maintain-interval>1</maintain-interval>
+        <compact-interval>1</compact-interval>
+        <state-change-threshold>1</state-change-threshold>
+        <dirty-log-tolerance>1</dirty-log-tolerance>
+    </snapshot>
+    <metrics>
+        <avail-critical-point>1</avail-critical-point>
+        <recovery-cool-down>100</recovery-cool-down>
+    </metrics>
+    <storage>
+        <log>./data0/raft2/log</log>
+        <state>./data0/raft2/state</state>
+        <locker>./data0/raft2/locker</locker>
+        <snapshot>./data0/raft2/snapshot</snapshot>
+    </storage>
+</raft>

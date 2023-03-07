@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raft>
+    <cluster>
+        <local>raft://127.0.0.1:6001</local>
+        <remote>raft://127.0.0.1:6002</remote>
+        <remote>raft://127.0.0.1:6003</remote>
+    </cluster>
+    <timeout>
+        <pre-vote>true</pre-vote>
+        <tick>300</tick>
+        <heartbeat>1</heartbeat>
+        <election>3</election>
+        <broadcast>0.5</broadcast>
+    </timeout>
+    <!--<snapshot>-->
+        <!--<trigger-interval>30</trigger-interval>-->
+        <!--<maintain-interval>60</maintain-interval>-->
+        <!--<compact-interval>60</compact-interval>-->
+        <!--<state-change-threshold>1000</state-change-threshold>-->
+        <!--<dirty-log-tolerance>5000</dirty-log-tolerance>-->
+    <!--</snapshot>-->
+    <snapshot>
+        <trigger-interval>1</trigger-interval>
+        <maintain-interval>1</maintain-interval>
+        <compact-interval>1</compact-interval>
+        <state-change-threshold>1</state-change-threshold>
+        <dirty-log-tolerance>1</dirty-log-tolerance>
+    </snapshot>
+    <metrics>
+        <avail-critical-point>1</avail-critical-point>
+        <recovery-cool-down>100</recovery-cool-down>
+    </metrics>
+    <storage>
+        <log>./data0/raft1/log</log>
+        <state>./data0/raft1/state</state>
+        <locker>./data0/raft1/locker</locker>
+        <snapshot>./data0/raft1/snapshot</snapshot>
+    </storage>
+</raft>
