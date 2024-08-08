@@ -16,6 +16,7 @@ package io.lubricant.consensus.raft;
  * New
  *
  * @author wangchao
+ * @version v0.1 2024-08-08 16:33 wangchao Exp $
  * @version v0.1 2024-08-08 17:09 wangchao Exp $
  * @version v0.1 2024-08-08 17:38 wangchao Exp $
  */
