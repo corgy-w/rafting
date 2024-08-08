@@ -10,12 +10,13 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package io.lubricant.consensus.raft; 
+package io.lubricant.consensus.raft;
+
 /**
  * New
  *
  * @author wangchao
- * @version v0.1 2024-08-08 17:09 wangchao Exp $
+ * @version v0.1 2024-08-08 17:38 wangchao Exp $
  */
 public class New {
 }
