@@ -19,4 +19,8 @@ package io.lubricant.consensus.raft;
  * @version v0.1 2024-08-08 17:38 wangchao Exp $
  */
 public class New {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
 }
