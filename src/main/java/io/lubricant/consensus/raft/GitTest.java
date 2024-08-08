@@ -16,6 +16,7 @@ package io.lubricant.consensus.raft;
  * GitTest
  *
  * @author wangchao
+ * @version v0.1 2024-08-08 17:08 wangchao Exp $
  * @version v0.1 2024-08-08 17:07 wangchao Exp $
  */
 public class GitTest {
