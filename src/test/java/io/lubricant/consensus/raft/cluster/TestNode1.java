@@ -26,7 +26,6 @@ public class TestNode1 {
         container.create(new FileBasedTestFactory());
         RaftStub root;
         while (true) try {
-            // 获取用户存根
             root = container.getStub("root");
             if (root != null) break;
             container.openContext("root", true);
@@ -41,12 +40,7 @@ public class TestNode1 {
                 int rand = ThreadLocalRandom.current().nextInt(1000);
                 // 提交用户指令 追加指令
                 root.submit(new AppendCommand("node1-" + rand));
-//                Boolean result = root.execute(new AppendCommand("node1-" + rand), 1000);
-//                logger.info("execute result: {}", result);
             } catch (Throwable ex) {
-                if (ex instanceof ExecutionException) {
-                    ex = ex.getCause();
-                }
                 if (! (ex instanceof NotLeaderException)) {
                     logger.info("执行失败: {}", ex.getClass().getSimpleName());
                 }
